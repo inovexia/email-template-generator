@@ -12,22 +12,20 @@ for (i = 0; i < submitFormSelectors.length; i++) {
       fetch(formURL, {
         method: "POST",
         body: formData,
-      })
-        .then(function (response) {
+      }).then(function (response) {
           return response.json();
-        })
-        .then(function (result) {
+      }).then(function (result) {
           //toastr.clear();
-          if (result.status == true) {
+          if (result.status == false) {
+            document.getElementById('messages').innerHtml = result.error;
             //toastr.success(result.message, "", { timeOut: 1000 });
+          } else {
             if (result.redirect != "") {
               document.location = result.redirect;
             }
-          } else {
-            var message = result.error.replace("/[\n\r]/g", "");
             //toastr.error(message, "", { timeOut: 2000 });
           }
-        });
+      });
     });
   }
 }

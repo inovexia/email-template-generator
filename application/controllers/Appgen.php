@@ -1,4 +1,4 @@
-<?php
+<?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Appgen extends CI_Controller {
@@ -18,6 +18,15 @@ class Appgen extends CI_Controller {
 		$data['apanel'] = $this->load->view ('apanel/saom', $data, true);
 		$this->load->view ('header', $data);
 		$this->load->view ('templates/saom/page1', '');
+		$this->load->view ('footer', $data);
+	}
+
+	public function sbwk ()	{	
+
+		$data['page_title'] = 'SBWK';
+		$data['apanel'] = $this->load->view ('apanel/sbwk', $data, true);
+		$this->load->view ('header', $data);
+		$this->load->view ('templates/sbwk/page1', '');
 		$this->load->view ('footer', $data);
 	}
 

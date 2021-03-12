@@ -7,6 +7,7 @@
     <title>TELUS</title>
     <link rel="stylesheet" href="<?php echo base_url ('theme/assets/css/pure-min.css'); ?>">
     <link rel="stylesheet" href="<?php echo base_url ('theme/assets/css/grids-responsive-min.css'); ?>">
+    <link rel="stylesheet" href="<?php echo base_url ('theme/assets/css/toastr.min.css'); ?>">
     <link rel="stylesheet" href="<?php echo base_url ('theme/assets/css/styles.css'); ?>">
 </head>
 <body>
@@ -14,6 +15,8 @@
 <div id="layout" class="pure-g">
     <div class="sidebar pure-u-1 pure-u-md-1-4">
         <?php echo $apanel; ?>
+
+        <div id="messages"></div>
     </div>
 
     <!-- A wrapper for all the content -->
