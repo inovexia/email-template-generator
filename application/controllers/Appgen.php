@@ -30,4 +30,13 @@ class Appgen extends CI_Controller {
 		$this->load->view ('footer', $data);
 	}
 
+	public function sbhanger ()	{	
+
+		$data['page_title'] = 'SB Hanger';
+		$data['apanel'] = $this->load->view ('apanel/sbhanger', $data, true);
+		$this->load->view ('header', $data);
+		$this->load->view ('templates/sbhanger/page1', '');
+		$this->load->view ('footer', $data);
+	}
+
 }

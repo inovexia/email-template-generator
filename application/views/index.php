@@ -15,10 +15,11 @@
             <a class="pure-button button-primary" href="<?php echo site_url ('appgen/sbwk'); ?>">Smart Building Welcome Kit</a>
         </p>
         <p>
-            <a class="pure-button button-primary" href="<?php echo site_url ('appgen/saom'); ?>">Smart Apartment Overview</a>
+            <a class="pure-button button-primary" href="<?php echo site_url ('appgen/saoverview'); ?>">Smart Apartment Overview</a>
         </p>
         <p>
-            <a class="pure-button button-primary" href="<?php echo site_url ('appgen/saom'); ?>">Smart Building Hanger</a>
+            <a class="pure-button button-primary" href="<?php echo site_url ('appgen/sbhanger'); ?>">Smart Building Hanger</a>
         </p>
     </div>
+
 </section>

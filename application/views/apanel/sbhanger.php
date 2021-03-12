@@ -5,7 +5,7 @@
 	
 	<div class="">
 
-		<?php echo form_open_multipart ('appgen_actions/sbwk', ['class'=>"pure-form pure-form-stacked validate-forms"]); ?>
+		<?php echo form_open_multipart ('appgen_actions/sbhanger', ['class'=>"pure-form pure-form-stacked validate-forms"]); ?>
 			<div class="pure-g">
 		        <input type="file" placeholder="" name="userfile" />
 		    </div>
@@ -23,6 +23,7 @@
 		</form>
 
 	</div>
+
     <div><a href="<?php echo site_url (); ?>">Back</a></div>
 
 </div>
