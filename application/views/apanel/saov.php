@@ -1,7 +1,7 @@
-<h2 class="text-purple mt-4">Smart Building Welcome Kit</h2>
+<h2 class="text-purple mt-4">Smart Apartment Overview</h2>
 
 
-<?php echo form_open_multipart ('appgen_actions/sbwk', ['class'=>"pure-form pure-form-stacked validate-forms"]); ?>
+<?php echo form_open_multipart ('appgen_actions/saov', ['class'=>"pure-form pure-form-stacked validate-forms"]); ?>
 	<label class="text-purple">Variable fields:</label>
     <input type="file" placeholder="" name="userfile" />
 

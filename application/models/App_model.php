@@ -16,7 +16,7 @@ class App_model extends CI_Model {
 		
 		// upload parameters
 		$options['upload_path'] 	= $upload_dir;
-		$options['allowed_types'] 	= 'gif|jpg|png';
+		$options['allowed_types'] 	= 'gif|jpg';
 		$options['max_size']		= MAX_FILE_SIZE;
 		$options['overwrite']		= true;
 		

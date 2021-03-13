@@ -1,19 +1,13 @@
-<div class="header">
-    <h1 class="brand-title">TELUS </h1>
-    <h2 class="brand-tagline">PDF Generator</h2>
-    <hr>
-	
-	<div class="">
+<h2 class="text-purple mt-4">Smart Apartment Online Messaging</h2>
 
-		<?php echo form_open ('appgen_actions/saom', ['class'=>"pure-form pure-form-stacked validate-forms"]); ?>
-			<div class="pure-g">
-		        <input type="text" placeholder="Development Name" name="dev_name" />
-		    </div>
-			<div class="pure-g">
-		        <button type="submit" class="pure-button pure-button-primary">Save & Generate PDF</button>
-		    </div>
-		</form>
 
+<?php echo form_open ('appgen_actions/saom', ['class'=>"pure-form pure-form-stacked validate-forms"]); ?>
+	<label class="text-purple">Variable fields:</label>
+	<input type="text" name="dev_name">
+
+	<div class="mt-4">	
+    	<a href="<?php echo site_url (); ?>" class="pure-button button-purple-outline">Back</a>
+		<button type="submit" class="pure-button button-purple">Save & Generate PDF</button>
 	</div>
 
-</div>
+</form>

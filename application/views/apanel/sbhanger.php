@@ -1,29 +1,21 @@
-<div class="header">
-    <h1 class="brand-title">TELUS </h1>
-    <h2 class="brand-tagline">PDF Generator</h2>
-    <hr>
-	
-	<div class="">
+<h2 class="text-purple mt-4">Smart Building Hanger</h2>
 
-		<?php echo form_open_multipart ('appgen_actions/sbhanger', ['class'=>"pure-form pure-form-stacked validate-forms"]); ?>
-			<div class="pure-g">
-		        <input type="file" placeholder="" name="userfile" />
-		    </div>
-			<div class="pure-g">
-		        <button type="submit" class="pure-button pure-button-primary">Save & Generate PDF</button>
-		    </div>
 
-		    <div class="errors ">
-		    	<?php 
-		    	if (isset ($_GET['status']) && $_GET['status'] == 'false') {
-		    		echo $_GET['error'];
-		    	}
-		    	?>
-		    </div>
-		</form>
+<?php echo form_open_multipart ('appgen_actions/sbhanger', ['class'=>"pure-form pure-form-stacked validate-forms"]); ?>
+	<label class="text-purple">Variable fields:</label>
+	<input type="file" placeholder="" name="userfile" />
 
+	<div class="mt-4">	
+    	<a href="<?php echo site_url (); ?>" class="pure-button button-purple-outline">Back</a>
+		<button type="submit" class="pure-button button-purple">Save & Generate PDF</button>
 	</div>
 
-    <div><a href="<?php echo site_url (); ?>">Back</a></div>
+    <div class="errors mt-3">
+    	<?php 
+    	if (isset ($_GET['status']) && $_GET['status'] == 'false') {
+    		echo $_GET['error'];
+    	}
+    	?>
+    </div>
 
-</div>
+</form>
