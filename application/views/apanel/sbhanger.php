@@ -9,7 +9,7 @@
 
 	<div class="mt-4">	
     	<a href="<?php echo site_url (); ?>" class="pure-button button-purple-outline">Back</a>
-		<button type="submit" class="pure-button button-green">Save & Generate PDF</button>
+		<button type="submit" class="pure-button button-green">Generate PDF</button>
 	</div>
 
     <div class="errors text-danger mt-3">

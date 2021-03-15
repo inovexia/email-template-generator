@@ -16,10 +16,10 @@
     <div class="sidebar pure-u-1 pure-u-md-1-4">
         <div class="brand-logo">
             <a href="<?php echo site_url (); ?>">
-                <img src="<?php echo base_url ('theme/assets/img/sidebar/set-logo.png'); ?>" width="70" height="25"><br>
-                <img src="<?php echo base_url ('theme/assets/img/sidebar/set-text.png'); ?>" width="100" height="12">
+                <img src="<?php echo base_url ('theme/assets/img/sidebar/set-logo.png'); ?>" width="60" height="22"><br>
+                <img src="<?php echo base_url ('theme/assets/img/sidebar/set-text.png'); ?>" width="80" height="10">
             </a>
-            <img src="<?php echo base_url ('theme/assets/img/sidebar/telus-logo.png'); ?>" width="150" height="30">
+            <img src="<?php echo base_url ('theme/assets/img/sidebar/telus-logo.png'); ?>" width="120" height="25">
         </div>
         
         <?php echo $apanel; ?>
