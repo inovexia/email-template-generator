@@ -1,8 +1,8 @@
 
             <div class="footer">
-                <div class="pure-menu pure-menu-horizontal">
+                <div class="pure-menu pure-menu-horizontal" hidden>
                     <ul>
-                        <li class="pure-menu-item"><a href="http://purecss.io/" class="pure-menu-link">About</a></li>
+                        <li class="pure-menu-item" ><a href="http://purecss.io/" class="pure-menu-link">About</a></li>
                     </ul>
                 </div>
             </div>

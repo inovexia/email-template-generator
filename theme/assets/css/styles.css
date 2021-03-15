@@ -8,7 +8,11 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     font-family: helvetica;
-    font-weight: 10;
+    font-weight: normal;
+}
+
+html, body {
+    font-size: 14px;
 }
 
 a {
@@ -20,8 +24,23 @@ a:focus {
     text-decoration: underline;
 }
 
+h1 {
+    font-size: 2.4em;
+}
+h2 {
+    font-size: 2.0em;
+}
 h3 {
-    font-weight: 100;
+    font-size: 1.8em;
+}
+h4 {
+    font-size: 1.6em;
+}
+h5 {
+    font-size: 1.4em;
+}
+h6 {
+    font-size: 1.2em;
 }
 
 /* LAYOUT CSS */
@@ -37,6 +56,7 @@ h3 {
 .sidebar {
     background: #fff;
     box-shadow: 10px 0 5px -2px #ccc;
+    clear: both;
 }
 .brand-logo {
     display: flex;
@@ -48,6 +68,7 @@ h3 {
     position: fixed;
     text-align: right;
     margin-bottom: 10px;
+    clear: both;
 }
 
 .sidebar-footer img {
@@ -56,6 +77,7 @@ h3 {
 
 .footer {
     padding: 1em 0;
+    clear: both;
 }
 .footer a {
     color: #ccc;
@@ -95,7 +117,7 @@ h3 {
 .button-purple-outline {
     border-radius: 4px;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-    padding: 5px 20px;
+    padding: 8px 25px;
     font-size: 12px;
 }
 
@@ -116,9 +138,36 @@ h3 {
     border: 2px solid #462a69;
 }
 
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  width:100%;
+}
+
+.btn-upload {
+  border: 2px solid #462a69;
+  color: white;
+  background-color: #462a69;
+  padding: 8px 21px;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 1em;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+/*===============================================*/
 /* Text colors */
 .text-purple {
     color: #462a69;
+}
+.text-danger {
+    color: red;
 }
 
 /* Margins */
@@ -134,3 +183,4 @@ h3 {
 .mt-4 {
     margin-top: 40px;
 }
+

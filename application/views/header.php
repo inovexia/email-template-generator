@@ -15,13 +15,13 @@
 <div id="layout" class="pure-g">
     <div class="sidebar pure-u-1 pure-u-md-1-4">
         <div class="brand-logo">
-            <span>                
-                <img src="<?php echo base_url ('theme/assets/img/sidebar/set-logo.png'); ?>" width="70" height="25">
+            <a href="<?php echo site_url (); ?>">
+                <img src="<?php echo base_url ('theme/assets/img/sidebar/set-logo.png'); ?>" width="70" height="25"><br>
                 <img src="<?php echo base_url ('theme/assets/img/sidebar/set-text.png'); ?>" width="100" height="12">
-            </span>
+            </a>
             <img src="<?php echo base_url ('theme/assets/img/sidebar/telus-logo.png'); ?>" width="150" height="30">
         </div>
-
+        
         <?php echo $apanel; ?>
 
         <div id="messages"></div>

@@ -1,6 +1,6 @@
-<h2 class="text-purple mt-4">This is Project title</h2>
+<h2 class="text-purple mt-4">Select a template to continue</h2>
 
-
+<!--
 <label class="text-purple">Variable fields:</label>
 <form class="pure-form pure-form-stacked">
 	<input type="text" name="">
@@ -13,3 +13,4 @@
 	</div>
 
 </form>
+-->

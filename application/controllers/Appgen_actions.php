@@ -139,7 +139,8 @@ class Appgen_actions extends CI_Controller {
 	        // set logo image
 			$upload_dir =  $this->config->item ('sbwk_dir');
 			$image_logo = base_url ($upload_dir . $response['file_name']);
-			$pdf->Image($image_logo, 162, 22, 36, 12, 'JPG', '', '', true, 150, '', false, false, 0, false, false, false);
+			$file_type = $response['file_type'];
+			$pdf->Image($image_logo, 162, 22, 36, 12, $file_type, '', '', true, 150, '', false, false, 0, false, false, false);
 
 	        // restore auto-page-break status
 	        $pdf->SetAutoPageBreak($auto_page_break, $bMargin);
@@ -249,7 +250,8 @@ class Appgen_actions extends CI_Controller {
 	        // set logo image
 			$upload_dir =  $this->config->item ('sbwk_dir');
 			$image_logo = base_url ($upload_dir . $response['file_name']);
-			$pdf->Image($image_logo, 5, 5, 34, 12, 'JPG', '', '', false, 150, '', false, false, 0, false, false, false);
+			$file_type = $response['file_type'];
+			$pdf->Image($image_logo, 5, 5, 34, 12, '', '', '', false, 150, '', false, false, 0, false, false, false);
 
 	        // restore auto-page-break status
 	        $pdf->SetAutoPageBreak($auto_page_break, $bMargin);
@@ -331,7 +333,8 @@ class Appgen_actions extends CI_Controller {
 	        // set logo image
 			$upload_dir =  $this->config->item ('sbwk_dir');
 			$image_logo = base_url ($upload_dir . $response['file_name']);
-			$pdf->Image($image_logo, 17, 7, 70, 20, 'JPG', '', '', true, 150, '', false, false, 0, false, false, false);
+			$file_type = $response['file_type'];
+			$pdf->Image($image_logo, 17, 7, 70, 20, $file_type, '', '', true, 150, '', false, false, 0, false, false, false);
 
 	        // restore auto-page-break status
 	        $pdf->SetAutoPageBreak($auto_page_break, $bMargin);
