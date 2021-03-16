@@ -27,8 +27,10 @@
         <div id="messages"></div>
 
         <div class="sidebar-footer">
-            <img src="<?php echo base_url ('theme/assets/img/sidebar/powered-by.png'); ?>"  width="80" height="6">
-            <img src="<?php echo base_url ('theme/assets/img/sidebar/jacobus-logo.png'); ?>" width="80" height="20">
+            <div class="footer-img">
+                <img src="<?php echo base_url ('theme/assets/img/sidebar/powered-by.png'); ?>"  width="90" height="9" style="margin-top: 16px" >
+                <img src="<?php echo base_url ('theme/assets/img/sidebar/jacobus-logo.png'); ?>" width="124" height="44" style="float: right; margin-right: 5px">
+            </div>
         </div>
     </div>
 

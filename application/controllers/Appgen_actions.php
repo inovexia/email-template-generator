@@ -25,6 +25,12 @@ class Appgen_actions extends CI_Controller {
 		$pdf->setPrintHeader(false);
 		$pdf->setPrintFooter(false);
 
+		// convert TTF font to TCPDF format and store it on the fonts folder
+		//$fontname = TCPDF_FONTS::addTTFfont('/fonts/helveticanow.ttf');
+
+		// use the font
+		//$pdf->SetFont($fontname, '', 14, '', false);
+		
 		// set default monospaced font
 		$pdf->SetDefaultMonospacedFont(PDF_FONT_MONOSPACED);
 
@@ -47,7 +53,7 @@ class Appgen_actions extends CI_Controller {
 		// ---------------------------------------------------------
 
 		// set font
-		$pdf->SetFont('dejavusans', '', 10);
+		$pdf->SetFont('helveticanow', '', 12);
 
 		// add a page
 		$pdf->AddPage();

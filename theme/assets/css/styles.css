@@ -58,22 +58,18 @@ h6 {
     box-shadow: 10px 0 5px -2px #ccc;
     clear: both;
 }
-.brand-logo {
+.brand-logo {    
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
 }
 
 .sidebar-footer {
     bottom: 0;
     position: fixed;
-    text-align: right;
     margin-bottom: 10px;
-    clear: both;
 }
 
-.sidebar-footer img {
-    vertical-align: middle;
-}
 
 .footer {
     padding: 1em 0;
@@ -103,7 +99,13 @@ h6 {
         position: fixed;
         top: 0;
         bottom: 0;
-        padding: 20px;
+        padding: 10px;
+    }
+    
+    .footer-img {
+        display: flex;
+        justify-content: flex-end;
+        vertical-align: baseline;
     }
 
     .footer {
