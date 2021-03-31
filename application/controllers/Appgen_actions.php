@@ -141,7 +141,7 @@ class Appgen_actions extends CI_Controller {
 			$upload_dir =  $this->config->item ('sbwk_dir');
 			$image_logo = base_url ($upload_dir . $response['file_name']);
 			$file_type = $response['file_type'];
-			$pdf->Image($image_logo, 162, 22, 36, 12, $file_type, '', '', true, 150, '', false, false, 0, false, false, false);
+			$pdf->Image($image_logo, 162, 22, 36, '', '', false, '', true, 150, '', false, false, 0, false, false, false);
 
 	        // restore auto-page-break status
 	        $pdf->SetAutoPageBreak($auto_page_break, $bMargin);
@@ -160,6 +160,36 @@ class Appgen_actions extends CI_Controller {
 	        // set bacground image
 	        $img_file = K_PATH_IMAGES.'templates/sbwk/page2.jpg';
 	        $pdf->Image($img_file, 0, 0, 294, 230, '', '', '', false, 300, '', false, false, 0);
+
+	        $data['username'] = $this->input->post ('username');
+	        $data['password'] = $this->input->post ('password');
+	        // $html = $this->load->view ('templates/sbwk/form', $data, true);
+
+	        $htmlData   =   '<html><head>';
+                $htmlData   .=  '<style>
+                .table1{
+                    border:0px;
+                    border-spacing: 0;
+                    text-align:left;
+                    width:450px;
+
+                }
+                .table1 tr td{
+                	font-size:14px;
+                	 text-align:left;
+                	 color:#462a69;
+                }
+                </style>';
+                $htmlData   .=  '</head><body>';
+                for($i=1; $i<=41; $i++) { 
+                $htmlData   .=	'<br>';
+ 				}
+                $htmlData   .=  '<table class="table1"><tr><td style="text-align:center; height:35px;">'.$data['username'].'</td></tr><tr><td style="text-align:center; height:15px;">'.$data['password'].'</td></tr></table>';
+                $htmlData   .=  '</body></html>';
+        		$pdf->writeHTML($htmlData, true, false, false, false, '');
+
+    		// output the HTML content
+    		
 	        // restore auto-page-break status
 	        $pdf->SetAutoPageBreak($auto_page_break, $bMargin);
 	        // set the starting point for the page content
@@ -252,7 +282,8 @@ class Appgen_actions extends CI_Controller {
 			$upload_dir =  $this->config->item ('sbwk_dir');
 			$image_logo = base_url ($upload_dir . $response['file_name']);
 			$file_type = $response['file_type'];
-			$pdf->Image($image_logo, 5, 5, 34, 12, '', '', '', false, 150, '', false, false, 0, false, false, false);
+			//Parameter details(1-> "top space", 2->"bottom space", 3->"logo width",m 4->"logo height")
+			$pdf->Image($image_logo, 5, 5, 34, '', '', '', '', false, 150, '', false, false, 0, false, false, false);
 
 	        // restore auto-page-break status
 	        $pdf->SetAutoPageBreak($auto_page_break, $bMargin);
@@ -334,7 +365,9 @@ class Appgen_actions extends CI_Controller {
 	        // set logo image
 			$upload_dir =  $this->config->item ('sbwk_dir');
 			$image_logo = base_url ($upload_dir . $response['file_name']);
-			$pdf->Image($image_logo, 17, 7, 70, 20, '', '', '', true, 150, '', false, false, 0, false, false, false);
+			
+			//Parameter details(1-> "top space", 2->"bottom space", 3->"logo width",m 4->"logo height")
+			$pdf->Image($image_logo, 17, 7, '', '', '', '', '', true, 150, '', false, false, 0, false, false, false);
 
 	        // restore auto-page-break status
 	        $pdf->SetAutoPageBreak($auto_page_break, $bMargin);
@@ -356,11 +389,43 @@ class Appgen_actions extends CI_Controller {
 	        // set logo image
 			$upload_dir =  $this->config->item ('sbwk_dir');
 			$image_logo = base_url ($upload_dir . $response['file_name']);
-			$pdf->Image($image_logo, 17, 7, 70, 20, '', '', '', true, 150, '', false, false, 0, false, false, false);
+			//Parameter details(1-> "top space", 2->"bottom space", 3->"logo width",m 4->"logo height")
+			$pdf->Image($image_logo, 17, 7, '', '', '', '', '', true, 150, '', false, false, 0, false, false, false);
+	        $data['name'] = $this->input->post ('name');
+	        $data['contact'] = $this->input->post ('contact');
+	        $data['email'] = $this->input->post ('email');
+	        // $html = $this->load->view ('templates/saov/form', $data, true);
+
+	        $htmlData   =   '<html><head>';
+                $htmlData   .=  '<style>
+                .tableWithOuterBorder{
+                    border:0px;
+                    border-spacing: 0;
+                    text-align:right;
+                    width:100%;
+                }
+                .tableWithOuterBorder tr td{
+                	font-size:10px;
+                	 text-align:right;
+                	 color:#462a69;
+                }
+                </style>';
+                $htmlData   .=  '</head><body>';
+                for($i=1; $i<=57; $i++) { 
+                $htmlData   .=	'<br>';
+ 				}
+                $htmlData   .=  '<table class="tableWithOuterBorder"><tr><td style="text-align:center;">'.$data['name'].'</td><td style="padding-left:0;">'.$data['email'].'</td><td style="text-align:center;">'.$data['contact'].'</td></tr></table>';
+                $htmlData   .=  '</body></html>';
+        $pdf->writeHTML($htmlData, true, false, false, false, '');
+
+    		// output the HTML content
+    		// $pdf->writeHTML($html, true, false, true, false, '');
+	        
 	        // restore auto-page-break status
 	        $pdf->SetAutoPageBreak($auto_page_break, $bMargin);
 	        // set the starting point for the page content
 	        $pdf->setPageMark();
+	        
 			// ---------------------------------------------------------
 
 			//Close and output PDF document

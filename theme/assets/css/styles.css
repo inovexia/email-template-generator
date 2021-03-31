@@ -68,6 +68,7 @@ h6 {
     bottom: 0;
     position: fixed;
     margin-bottom: 10px;
+    left: 0;
 }
 
 
@@ -184,5 +185,15 @@ h6 {
 }
 .mt-4 {
     margin-top: 40px;
+}
+
+.powered, .logo {
+    width: 25%;
+    height: fit-content;
+}
+
+.powered {
+    margin-right: 5px;
+    margin-top: 8px;
 }
 

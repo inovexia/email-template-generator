@@ -4,7 +4,8 @@
 <?php echo form_open_multipart ('appgen_actions/sbhanger', ['class'=>"pure-form pure-form-stacked validate-forms"]); ?>
     <div class="upload-btn-wrapper">
         <button class="btn-upload">Upload logo</button>
-        <input type="file" name="userfile" />
+        <input type="file" name="userfile" id="file-upload"/>
+        <div id="file-upload-filename" style="color:#462a69; font-family: helvetica; padding-top:10px;"></div>
     </div>
 
 	<div class="mt-4">	
