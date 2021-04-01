@@ -79,7 +79,7 @@ define ('K_PATH_IMAGES', base_url ('theme/assets/img/'));
 /**
  * Cache directory for temporary files (full path).
  */
-//define ('K_PATH_CACHE', '/tmp/');
+define ('K_PATH_CACHE', base_url ('content/tmp/'));
 
 /**
  * Generic name for a blank image.
@@ -114,7 +114,7 @@ define ('PDF_HEADER_TITLE', 'TCPDF Example');
 /**
  * Header description string.
  */
-define ('PDF_HEADER_STRING', "by Nicola Asuni - Tecnick.com\nwww.tcpdf.org");
+define ('PDF_HEADER_STRING', "TELUS Email Templates");
 
 /**
  * Document unit of measure [pt=point, mm=millimeter, cm=centimeter, in=inch].

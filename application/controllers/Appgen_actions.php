@@ -4,12 +4,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Appgen_actions extends CI_Controller {
 	
 
-	public function saom ()	{
+	public function saom ($dev_name='')	{
 
 		tcpdf ();
 		//$this->load->library ('custompdf');
 
-		$dev_name = $this->input->post ('dev_name');
+		//$dev_name = $this->input->post ('dev_name');
 
 		// create new PDF document
 		$pdf = new TCPDF('P', 'mm', [216, 279], true, 'UTF-8', false);
@@ -69,10 +69,9 @@ class Appgen_actions extends CI_Controller {
 		$pdf->lastPage();
 
 		// ---------------------------------------------------------
-
+		
 		//Close and output PDF document
-		$pdf->Output('telus-saom-'.$dev_name.'.pdf', 'D');
-
+		$pdf->Output('telus-saom-'.$dev_name.'.pdf', 'F');
 	}
 
 

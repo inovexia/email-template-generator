@@ -11,13 +11,19 @@ class Appgen extends CI_Controller {
 		$this->load->view ('footer', $data);
 	}
 
-	public function saom ()	{	
+	public function saom ()	{
 
 		$data['page_title'] = 'Select Template';
 		$data['dev_name'] = '<span style="color:red">{development_name}</span>';
 		$data['apanel'] = $this->load->view ('apanel/saom', $data, true);
+		//$data['script'] = $this->load->view ('scripts/saom', $data, true);
 		$this->load->view ('header', $data);
-		$this->load->view ('templates/saom/page1', '');
+		if ($this->input->post ('dev_name')) {
+			echo $data['dev_name'] = $this->input->post ('dev_name');
+			$this->load->view ('templates/saom/preview', $data);
+		} else {
+			$this->load->view ('templates/saom/page1', $data);
+		}
 		$this->load->view ('footer', $data);
 	}
 
