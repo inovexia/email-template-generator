@@ -79,7 +79,7 @@ define ('K_PATH_IMAGES', base_url ('theme/assets/img/'));
 /**
  * Cache directory for temporary files (full path).
  */
-define ('K_PATH_CACHE', base_url ('content/tmp/'));
+//define ('K_PATH_CACHE', base_url ('content/tmp/'));
 
 /**
  * Generic name for a blank image.

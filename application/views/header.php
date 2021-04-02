@@ -24,7 +24,14 @@
         
         <?php echo $apanel; ?>
 
-        <div id="messages"></div>
+        <div id="error-messages" class="text-danger">
+            <?php echo validation_errors (); ?>
+            <?php
+            if (isset($pdf_string) && is_array($pdf_string) && $pdf_string['status'] == false) {
+                echo $pdf_string['error'];
+            }
+            ?>
+        </div>
 
         <div class="sidebar-footer">
             <div class="footer-img">

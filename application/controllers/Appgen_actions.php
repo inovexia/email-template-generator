@@ -71,7 +71,7 @@ class Appgen_actions extends CI_Controller {
 		// ---------------------------------------------------------
 		
 		//Close and output PDF document
-		$pdf->Output('telus-saom-'.$dev_name.'.pdf', 'F');
+		$pdf->Output('telus-saom-'.$dev_name.'.pdf', 'I');
 	}
 
 

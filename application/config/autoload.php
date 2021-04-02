@@ -89,7 +89,7 @@ $autoload['drivers'] = array();
 |
 |	$autoload['helper'] = array('url', 'file');
 */
-$autoload['helper'] = array('tcpdf', 'url');
+$autoload['helper'] = array('tcpdf', 'url', 'form');
 
 /*
 | -------------------------------------------------------------------

@@ -1,6 +1,5 @@
 <h2 class="text-purple mt-4">Smart Apartment Online Messaging</h2>
 
-
 <?php echo form_open ('appgen/saom', ['class'=>"pure-form pure-form-stacked saom-form"]); ?>
     <div class="upload-btn-wrapper">
 		<label class="text-purple">Development name</label>

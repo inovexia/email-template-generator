@@ -1,24 +1,15 @@
 <h2 class="text-purple mt-4">Smart Building Hanger</h2>
 
 
-<?php echo form_open_multipart ('appgen_actions/sbhanger', ['class'=>"pure-form pure-form-stacked validate-forms"]); ?>
+<?php echo form_open_multipart ('appgen/sbhanger', ['class'=>"pure-form pure-form-stacked"]); ?>
     <div class="upload-btn-wrapper">
         <button class="btn-upload">Upload logo</button>
-        <input type="file" name="userfile" id="file-upload"/>
-        <div id="file-upload-filename" style="color:#462a69; font-family: helvetica; padding-top:10px;"></div>
+        <input type="file" placeholder="" name="userfile" id="file-upload" onchange="preview_image (this)">
+        <div id="upload-image-preview" class="mt-1"></div>
     </div>
 
-	<div class="mt-4">	
+	<div class="mt-2">	
     	<a href="<?php echo site_url (); ?>" class="pure-button button-purple-outline">Back</a>
 		<button type="submit" class="pure-button button-green">Generate PDF</button>
 	</div>
-
-    <div class="errors text-danger mt-3">
-    	<?php 
-    	if (isset ($_GET['status']) && $_GET['status'] == 'false') {
-    		echo $_GET['error'];
-    	}
-    	?>
-    </div>
-
 </form>
