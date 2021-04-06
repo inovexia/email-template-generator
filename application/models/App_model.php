@@ -373,7 +373,7 @@ class App_model extends CI_Model {
                 for($i=1; $i<=57; $i++) { 
                 	$htmlData   .=	'<br>';
  				}
-                $htmlData   .=  '<table class="tableWithOuterBorder"><tr><td style="text-align:center;">'.$data['name'].'</td><td style="padding-left:0;">'.$data['email'].'</td><td style="text-align:center;">'.$data['contact'].'</td></tr></table>';
+                $htmlData   .=  '<table class="tableWithOuterBorder"><tr><td style="text-align:center;">'.$data['name'].'</td><td style="padding-left:0;">'.$data['contact'].'</td><td style="text-align:center;">'.$data['email'].'</td></tr></table>';
             $htmlData   .=  '</body></html>';
         	
         	$pdf->writeHTML($htmlData, true, false, false, false, '');

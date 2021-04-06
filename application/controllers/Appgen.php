@@ -20,10 +20,14 @@ class Appgen extends CI_Controller {
 		if ($this->form_validation->run () == true) {
 			$data['dev_name'] = $this->input->post ('dev_name');
 			$this->load->view ('header', $data);
-			$this->load->view ('templates/saom/preview', $data);
+			if ($this->input->post ('preview') == true) {
+				
+			} else {
+				$this->load->view ('templates/saom/preview', $data);
+			}
 			$this->load->view ('footer', $data);
 		} else {
-			$data['dev_name'] = '<span style="color:red">{development_name}</span>';
+			$data['dev_name'] = '{development_name}';
 			$this->load->view ('header', $data);
 			$this->load->view ('templates/saom/page1', $data);
 			$this->load->view ('footer', $data);

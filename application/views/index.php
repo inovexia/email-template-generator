@@ -1,26 +1,52 @@
-<div class="pure-g">
-    <div class="photo-box pure-u-1 pure-u-md-1-2 ">
-        <a href="<?php echo site_url ('appgen/saom'); ?>">
-            <img src="<?php echo base_url ('theme/assets/img/templates/thumb-saom.jpg'); ?>" alt="SAOM" width="200">
-            <p>Smart Apartment Online Messaging</p>
-        </a>
+<div class="row mt-4">
+    <div class="col-6 ">
+        <div class="card">
+            <img src="<?php echo base_url ('theme/assets/img/templates/thumb-saom.jpg'); ?>" class="card-img-top " alt="SAOM" width="200" height="200">
+            <div class="card-body">
+            </div>
+            <div class="card-footer">
+                <a href="<?php echo site_url ('appgen/saom'); ?>">
+                    <p>Smart Apartment Online Messaging</p>                
+                </a>                
+            </div>
+            
+        </div>
     </div>
-    <div class="photo-box pure-u-1 pure-u-md-1-2 ">
-        <a href="<?php echo site_url ('appgen/sbwk'); ?>">
-            <img src="<?php echo base_url ('theme/assets/img/templates/thumb-sbwk.jpg'); ?>" alt="SAOM" width="200">
-            <p>Smart Building Welcome Kit</p>
-        </a>
+
+    <div class="col-6 ">
+        <div class="card">
+            <img src="<?php echo base_url ('theme/assets/img/templates/thumb-sbwk.jpg'); ?>" alt="SAOM" class="card-img-top"  width="200" height="200">
+            <div class="card-body">
+            </div>
+            <div class="card-footer">
+                <a href="<?php echo site_url ('appgen/sbwk'); ?>">
+                    <p>Smart Building Welcome Kit</p>
+                </a>
+            </div>
+        </div>
     </div>
-    <div class="photo-box pure-u-1 pure-u-md-1-2 ">
-        <a href="<?php echo site_url ('appgen/saov'); ?>">
-            <img src="<?php echo base_url ('theme/assets/img/templates/thumb-saov.jpg'); ?>" alt="SAOM" width="200">
-            <p>Smart Apartment Overview</p>
-        </a>
+
+    <div class="w-100 my-2"></div>
+
+    <div class="col-6 ">
+        <div class="card">
+            <img src="<?php echo base_url ('theme/assets/img/templates/thumb-saov.jpg'); ?>" alt="SAOM" width="200" height="200">
+            <div class="card-footer">
+                <a href="<?php echo site_url ('appgen/saov'); ?>">
+                    <p>Smart Apartment Overview</p>
+                </a>
+            </div>
+        </div>
     </div>
-    <div class="photo-box pure-u-1 pure-u-md-1-2 ">
-        <a href="<?php echo site_url ('appgen/sbhanger'); ?>">
+
+    <div class="col-6 ">
+        <div class="card">
             <img src="<?php echo base_url ('theme/assets/img/templates/thumb-sbhanger.jpg'); ?>" alt="SAOM" width="200">
-            <p>Smart Building Hanger</p>
-        </a>
+            <div class="card-footer">
+                <a href="<?php echo site_url ('appgen/sbhanger'); ?>">
+                    <p>Smart Building Hanger</p>
+                </a>
+            </div>
+        </div>
     </div>
 </div>

@@ -53,11 +53,10 @@ h6 {
     padding: 0;
 }
 
-.sidebar {
-    background: #fff;
-    box-shadow: 10px 0 5px -2px #ccc;
-    clear: both;
+.sidebar-vh-100 {
+    height: calc(100vh - 55px);
 }
+
 .brand-logo {    
     display: flex;
     justify-content: space-between;
@@ -68,7 +67,9 @@ h6 {
     bottom: 0;
     position: fixed;
     margin-bottom: 10px;
+    margin-top: 10px;
     left: 0;
+    padding-left: 30px;
 }
 
 
@@ -97,9 +98,9 @@ h6 {
     }
 
     .sidebar {
-        position: fixed;
+        position: absolute;
         top: 0;
-        bottom: 0;
+        left: 0;
         padding: 10px;
     }
     

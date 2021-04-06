@@ -11,7 +11,7 @@
 
 	<h2 style="color: rgb(75, 40, 109); font-weight: bolder;">Website Messaging</h2>
 
-	<h4 style="color: rgb(75, 40, 109); font-weight:bold">Why choose to live at <?php echo $dev_name; ?>?</h4>
+	<h4 style="color: rgb(75, 40, 109); font-weight:bold">Why choose to live at <span style="color:red"><?php echo $dev_name; ?></span>?</h4>
 	<div>
 		Experience the best, most effective smart home technology with TELUS. Upon move-in, you will have immediate access to the safety and convenience of a trusted TELUS home automation system.
 	</div>
@@ -80,18 +80,18 @@
 	<h1 style="color: rgb(75, 40, 109); margin-top: 50px">Social Media Messaging</h1>
 	<div>
 		<ul>
-			<li><p>The days of lost keys and lock outs are over. At <?php echo $dev_name; ?> enjoy peace of mind with keyless living. </p></li>
+			<li><p>The days of lost keys and lock outs are over. At <span style="color:red"><?php echo $dev_name; ?></span> enjoy peace of mind with keyless living. </p></li>
 
-			<li><p> With help from TELUS, we’re able to keep you in control. At <?php echo $dev_name; ?> securely and conveniently control your smart home’s devices with reliable, uninterrupted protection.</p></li>
+			<li><p> With help from TELUS, we’re able to keep you in control. At <span style="color:red"><?php echo $dev_name; ?></span> securely and conveniently control your smart home’s devices with reliable, uninterrupted protection.</p></li>
 
-			<li><p>Step into your fully connected home at <?php echo $dev_name; ?>.</p></li>
+			<li><p>Step into your fully connected home at <span style="color:red"><?php echo $dev_name; ?></span>.</p></li>
 
-			<li><p>At <?php echo $dev_name; ?> experience the best, most effective smart home technology with TELUS.</p></li>
+			<li><p>At <span style="color:red"><?php echo $dev_name; ?></span> experience the best, most effective smart home technology with TELUS.</p></li>
 
-			<li><p>Unleash the power of a TELUS smart home at <?php echo $dev_name; ?>.</p></li>
+			<li><p>Unleash the power of a TELUS smart home at <span style="color:red"><?php echo $dev_name; ?></span>.</p></li>
 
-			<li><p>Your house, your rules. At <?php echo $dev_name; ?> monitor and control your home with one simple app.</p></li>
+			<li><p>Your house, your rules. At <span style="color:red"><?php echo $dev_name; ?></span> monitor and control your home with one simple app.</p></li>
 
-			<li><p>Not just for your smartphones or tablets anymore. At <?php echo $dev_name; ?> control your TELUS smart home using your voice with Apple, Amazon and Google devices.</p></li>
+			<li><p>Not just for your smartphones or tablets anymore. At <span style="color:red"><?php echo $dev_name; ?></span> control your TELUS smart home using your voice with Apple, Amazon and Google devices.</p></li>
 		</ul>
 	</div>
