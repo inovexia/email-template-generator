@@ -213,7 +213,6 @@ class App_model extends CI_Model {
                     border-spacing: 0;
                     text-align:left;
                     width:450px;
-
                 }
                 .table1 tr td{
                 	font-size:14px;
@@ -222,12 +221,26 @@ class App_model extends CI_Model {
                 }
                 </style>';
                 $htmlData   .=  '</head><body>';
-                for($i=1; $i<=41; $i++) { 
-                $htmlData   .=	'<br>';
+                for($i=1; $i<=40; $i++) { 
+                	$htmlData   .=	'<br>';
  				}
-                $htmlData   .=  '<table class="table1"><tr><td style="text-align:center; height:35px;">'.$data['username'].'</td></tr><tr><td style="text-align:center; height:15px;">'.$data['password'].'</td></tr></table>';
+                $htmlData   .=  '<table class="table1">
+                	<tr>
+                		<td width="130">&nbsp;</td>
+                		<td style="text-align:left; height:25px; " ></td>
+                	</tr>
+                	<tr>
+                		<td></td>
+                		<td style="text-align:left; height:30px; padding-bottom: 10px" >'.$data['username'].'</td>
+                	</tr>
+                	<tr>
+                		<td></td>
+                		<td style="text-align:left; height:15px;">'.$data['password'].'</td>
+                	</tr>
+                </table>';
                 $htmlData   .=  '</body></html>';
-        		$pdf->writeHTML($htmlData, true, false, false, false, '');
+        	
+        	$pdf->writeHTML($htmlData, true, false, false, false, '');
 
     		// output the HTML content
     		
@@ -356,24 +369,22 @@ class App_model extends CI_Model {
 	        // $html = $this->load->view ('templates/saov/form', $data, true);
 
 	        $htmlData   =   '<html><head>';
-                $htmlData   .=  '<style>
-                .tableWithOuterBorder{
-                    border:0px;
-                    border-spacing: 0;
-                    text-align:right;
-                    width:100%;
-                }
-                .tableWithOuterBorder tr td{
-                	font-size:10px;
-                	 text-align:right;
-                	 color:#462a69;
-                }
-                </style>';
-                $htmlData   .=  '</head><body>';
-                for($i=1; $i<=57; $i++) { 
-                	$htmlData   .=	'<br>';
- 				}
-                $htmlData   .=  '<table class="tableWithOuterBorder"><tr><td style="text-align:center;">'.$data['name'].'</td><td style="padding-left:0;">'.$data['contact'].'</td><td style="text-align:center;">'.$data['email'].'</td></tr></table>';
+            $htmlData   .=  '</head><body>';
+            for($i=1; $i<=57; $i++) { 
+            	$htmlData   .=	'<br>';
+			}
+			$htmlData   .=  '<table width="100%">
+            	<tr>
+            		<td width="80"></td>
+					<td width="200">'.$data['name'].'</td>
+					<td width="210">'.$data['contact'].'</td>
+					<td>'.$data['email'].'</td>
+				</tr>
+            </table>';
+                
+                /*$htmlData   .=  '<table class="tableWithOuterBorder"><tr>
+                <td style="text-align:center;">'.$data['name'].'</td><td style="padding-left:0;">'.$data['contact'].'</td><td style="text-align:center;">'.$data['email'].'</td>
+                </tr></table>';*/
             $htmlData   .=  '</body></html>';
         	
         	$pdf->writeHTML($htmlData, true, false, false, false, '');
@@ -383,10 +394,12 @@ class App_model extends CI_Model {
 	        
 	        // restore auto-page-break status
 	        $pdf->SetAutoPageBreak($auto_page_break, $bMargin);
+	        
 	        // set the starting point for the page content
 	        $pdf->setPageMark();
 	        
-			// ---------------------------------------------------------
+			// reset pointer to the last page
+			$pdf->lastPage();
 
 			//Close and output PDF document
 			$pdf_string = $pdf->Output('telus-saov.pdf', 'I');

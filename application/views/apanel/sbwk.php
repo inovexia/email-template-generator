@@ -2,11 +2,11 @@
 
 
 <?php echo form_open_multipart ('appgen/sbwk', ['class'=>"pure-form pure-form-stacked"]); ?>
-    <div class="form-group">
         <div class="upload-btn-wrapper">
             <button class="btn-upload">Upload logo*</button>
             <input type="file" placeholder="" name="userfile" id="file-upload" onchange="preview_image (this)">
         </div>
+    <div class="form-group">
     </div>
 
     <div class="form-group">
