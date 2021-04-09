@@ -56,21 +56,29 @@ h6 {
     left: 0;
     z-index: 1000;
     display: block;
-    padding: 20px;
-    overflow-x: hidden;
-    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
     background-color: #fff;
     border-right: 1px solid #ccc;
-    box-shadow: 8px 0 5px 0px #3f3f41;
+    box-shadow: 8px 0 5px 0px #ccc;
+}
+
+.sidebar-content {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    margin-bottom: 20px;
+    padding: 20px;
 }
 
 .sidebar-footer {
+    background-color: #fff;
+    margin-top: 10px;
     bottom: 0;
     position: fixed;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    left: 0;
-    padding-left: 30px;
+    text-align: center;
+}
+
+.sidebar-footer-img {
+    margin-left: 50px;
 }
 
 
