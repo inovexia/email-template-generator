@@ -1,16 +1,1 @@
-<h2 class="text-purple mt-4">Select a template to continue</h2>
-
-<!--
-<label class="text-purple">Variable fields:</label>
-<form class="pure-form pure-form-stacked">
-	<input type="text" name="">
-
-
-	<div class="mt-4">	
-		<a class="pure-button button-green">Text 01</a>
-		<a class="pure-button button-purple">Text 02</a>
-		<a class="pure-button button-purple-outline">Text 03</a>
-	</div>
-
-</form>
--->
+<h5 class="text-danger mt-4">Select a template to continue</h5>

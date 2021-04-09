@@ -1,2 +1,8 @@
-<img src="<?php echo base_url ('theme/assets/img/templates/sbwk/page1.jpg'); ?>" width="100%">
-<img src="<?php echo base_url ('theme/assets/img/templates/sbwk/page2.jpg'); ?>" width="100%">
+<div class="sbwk_page1"></div>
+
+<div class="sbwk_page2">
+	<div class="data">
+		<div class="username"><?php echo $username; ?></div>
+		<div class="password"><?php echo $password; ?></div>
+	</div>
+</div>

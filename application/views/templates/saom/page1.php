@@ -1,17 +1,22 @@
+<div style="padding: 20px 40px;">
 	<table border="0" width="100%">
 		<tr>
-			<td width="50%">
+			<td width="70%">
 				<h1 style="color: rgb(75, 40, 109)">TELUS SMART APARTMENT</h1>			
 			</td>
-			<td width="50%" align="right">
+			<td width="30%" align="right">
 				<img src="<?php echo base_url ('theme/assets/img/sidebar/telus-logo.png'); ?>" alt="energy" width="160" />			
 			</td>
 		</tr>
 	</table>
 
-	<h2 style="color: rgb(75, 40, 109); font-weight: bolder;">Website Messaging</h2>
+	<br>
 
-	<h4 style="color: rgb(75, 40, 109); font-weight:bold">Why choose to live at <span style="color:red"><?php echo $dev_name; ?></span>?</h4>
+	<h2 style="color: rgb(75, 40, 109); font-weight: normaler;">Website Messaging</h2>
+	
+	<br>
+
+	<h4 style="color: rgb(75, 40, 109); font-weight:normal">Why choose to live at <span style="color:red"><?php echo $dev_name; ?></span>?</h4>
 	<div>
 		Experience the best, most effective smart home technology with TELUS. Upon move-in, you will have immediate access to the safety and convenience of a trusted TELUS home automation system.
 	</div>
@@ -21,7 +26,7 @@
 	<table border="0" cellspacing="1" cellpadding="1">
 		<tr>
 			<td colspan="2">
-				<h4 style="color: rgb(75, 40, 109); font-weight:bold">Reduce energy costs</h4>
+				<h4 style="color: rgb(75, 40, 109); font-weight:normal">Reduce energy costs</h4>
 			</td>
 		</tr>
 		<tr>
@@ -35,7 +40,7 @@
 
 		<tr>
 			<td colspan="2">
-				<h4 style="color: rgb(75, 40, 109); font-weight:bold">Stay in control</h4>
+				<h4 style="color: rgb(75, 40, 109); font-weight:normal">Stay in control</h4>
 			</td>
 		</tr>
 		<tr>
@@ -49,7 +54,7 @@
 
 		<tr>
 			<td colspan="2">
-				<h4 style="color: rgb(75, 40, 109); font-weight:bold">Improve Safety</h4>
+				<h4 style="color: rgb(75, 40, 109); font-weight:normal">Improve Safety</h4>
 			</td>
 		</tr>	
 		<tr>
@@ -63,7 +68,7 @@
 
 		<tr>
 			<td colspan="2">
-				<h4 style="color: rgb(75, 40, 109); font-weight:bold">Your home, your rules</h4>
+				<h4 style="color: rgb(75, 40, 109); font-weight:normal">Your home, your rules</h4>
 			</td>
 		</tr>
 		<tr>
@@ -77,7 +82,7 @@
 		
 	</table>
 
-	<h1 style="color: rgb(75, 40, 109); margin-top: 50px">Social Media Messaging</h1>
+	<h1 style="color: rgb(75, 40, 109); margin-top: 30px">Social Media Messaging</h1>
 	<div>
 		<ul>
 			<li><p>The days of lost keys and lock outs are over. At <span style="color:red"><?php echo $dev_name; ?></span> enjoy peace of mind with keyless living. </p></li>
@@ -95,3 +100,4 @@
 			<li><p>Not just for your smartphones or tablets anymore. At <span style="color:red"><?php echo $dev_name; ?></span> control your TELUS smart home using your voice with Apple, Amazon and Google devices.</p></li>
 		</ul>
 	</div>
+</div>

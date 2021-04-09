@@ -1,7 +1,7 @@
 <h2 class="text-purple mt-4">Smart Apartment Overview</h2>
 
 
-<?php echo form_open_multipart ('appgen/saov', ['class'=>""]); ?>
+<?php echo form_open_multipart ('appgen/saov', ['class'=>"", 'id'=>'saov-form']); ?>
     <div class="form-group">
         <div class="upload-btn-wrapper">
             <button class="btn-upload">Upload logo</button>
@@ -29,8 +29,10 @@
     </div>
 
 	<div class="mt-4">	
+        <button type="button" onclick="htmlPreview()" class="btn  btn-sm button-purple d-none">Normal Preview </button>
+        <button type="button" onclick="pdfPreview()"  class="btn  btn-sm button-green">PDF Preview</button>
+        <div class="mt-2"></div>
     	<a href="<?php echo site_url (); ?>" class="btn btn-sm button-purple-outline">Back</a>
-		<button type="submit" class="btn btn-sm button-green">Generate PDF</button>
 	</div>
 
 </form>

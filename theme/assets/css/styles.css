@@ -1,14 +1,17 @@
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNow;
   src: url(HelveticaNowDisplay-Regular.ttf);
+}
+body {
+    background-color: #ccc;
 }
 
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    font-family: helvetica;
-    font-weight: normal;
+    font-family: helvetica, helveticaNow;
+    font-weight: 300;
 }
 
 html, body {
@@ -25,34 +28,26 @@ a:focus {
 }
 
 h1 {
-    font-size: 2.4em;
+    font-size: 1.6em;
+    font-weight: 100;
 }
 h2 {
-    font-size: 2.0em;
+    font-size: 1.5em;
 }
 h3 {
-    font-size: 1.8em;
-}
-h4 {
-    font-size: 1.6em;
-}
-h5 {
     font-size: 1.4em;
 }
-h6 {
+h4 {
+    font-size: 1.3em;
+}
+h5 {
     font-size: 1.2em;
+}
+h6 {
+    font-size: 1.1em;
 }
 
 /* LAYOUT CSS */
-.pure-img-responsive {
-    max-width: 100%;
-    height: auto;
-}
-
-#layout {
-    padding: 0;
-}
-
 .sidebar {
     position: fixed;
     width: 290px;
@@ -64,15 +59,9 @@ h6 {
     padding: 20px;
     overflow-x: hidden;
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-    background-color: #f5f5f5;
+    background-color: #fff;
     border-right: 1px solid #ccc;
-    box-shadow: 8px 0 5px 0px #ccc;
-}
-
-.brand-logo {    
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+    box-shadow: 8px 0 5px 0px #3f3f41;
 }
 
 .sidebar-footer {
@@ -99,13 +88,31 @@ h6 {
 }
 
 @media (min-width: 768px) {
-    .main {
-        padding-left: 270px; /* 270 + 40 */
+    main {
+        margin-left: 290px; /* 270 + 40 */
     }
 
-    .header {
-        margin: 10px;
-        text-align: left;
+    #outputDiv {
+        max-width: 816px;
+    }
+    
+    .footer-img {
+        display: flex;
+        justify-content: flex-end;
+        vertical-align: baseline;
+    }
+
+    .footer {
+        text-align: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .sidebar {
+        margin-left: -300px;;
+    }
+    main {
+        margin-left: 0px; 
     }
     
     .footer-img {
@@ -139,6 +146,10 @@ h6 {
     background: #462a69;
     color: white;
     border: 2px solid #462a69;
+}
+
+.button-purple:hover {
+    color: #ccc;
 }
 
 .button-purple-outline {
@@ -203,3 +214,32 @@ h6 {
     margin-top: 8px;
 }
 
+.sbwk_page1 {
+    background-image: url("../img/templates/sbwk/page1.jpg");
+    background-repeat: no-repeat; 
+    width: 100%;
+    max-width: 1112px;
+    height: 673px; 
+    background-position: top left; 
+    background-size: contain;
+}
+
+
+.sbwk_page2 {
+    background-image: url("../img/templates/sbwk/page2.jpg");
+    background-repeat: no-repeat; 
+    width: 100%;
+    max-width: 1112px;
+    height: 673px;
+    background-position: top left; 
+    background-size: contain;
+}
+
+.sbwk_page2 .data {
+    position: fixed;
+    bottom: 97px;
+    left: 240px;
+}
+.sbwk_page2 .data .password {
+    margin-top: : 15px;
+}
