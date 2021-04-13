@@ -45,8 +45,13 @@ class Appgen_actions extends CI_Controller {
 			$data['username'] = $this->input->post ('username');
 			$data['password'] = $this->input->post ('password');
 			$output = $this->load->view ('templates/sbwk/page1', $data, true);
-			$this->output->set_content_type("application/json");
-			$this->output->set_output(json_encode(array('status'=>true, 'output'=>$output )));
+			if (is_string($output)) {
+				$this->output->set_content_type("application/json");
+				$this->output->set_output(json_encode(array('status'=>true, 'output'=>$output)));
+			} else {
+				$this->output->set_content_type("application/json");
+				$this->output->set_output(json_encode(array('status'=>false, 'error'=>$output)));
+			}
 		} else {
 			$this->output->set_content_type("application/json");
 			$this->output->set_output(json_encode(array('status'=>false, 'error'=>validation_errors() )));
@@ -61,8 +66,13 @@ class Appgen_actions extends CI_Controller {
 		if ($this->form_validation->run () == true) {
 			$data['pdf_string'] = $this->app_model->sbwk_preview ();
 			$output = $this->load->view ('templates/sbwk/pdf', $data, true);
-			$this->output->set_content_type("application/json");
-			$this->output->set_output(json_encode(array('status'=>true, 'output'=>$output )));
+			if (is_string($output)) {
+				$this->output->set_content_type("application/json");
+				$this->output->set_output(json_encode(array('status'=>true, 'output'=>$output)));
+			} else {
+				$this->output->set_content_type("application/json");
+				$this->output->set_output(json_encode(array('status'=>false, 'error'=>$output)));
+			}
 		} else {
 			$this->output->set_content_type("application/json");
 			$this->output->set_output(json_encode(array('status'=>false, 'error'=>validation_errors() )));
@@ -80,8 +90,13 @@ class Appgen_actions extends CI_Controller {
 		if ($this->form_validation->run () == true) {
 			$data['pdf_string'] = $this->app_model->saov_preview ();
 			$output = $this->load->view ('templates/saov/pdf', $data, true);
-			$this->output->set_content_type("application/json");
-			$this->output->set_output(json_encode(array('status'=>true, 'output'=>$output )));
+			if (is_string($output)) {
+				$this->output->set_content_type("application/json");
+				$this->output->set_output(json_encode(array('status'=>true, 'output'=>$output)));
+			} else {
+				$this->output->set_content_type("application/json");
+				$this->output->set_output(json_encode(array('status'=>false, 'error'=>$output)));
+			}
 		} else {
 			$this->output->set_content_type("application/json");
 			$this->output->set_output(json_encode(array('status'=>false, 'error'=>validation_errors() )));
@@ -97,8 +112,13 @@ class Appgen_actions extends CI_Controller {
 		if (is_array($response)) {
 			$data['pdf_string'] = $this->app_model->sbhanger_preview ($response);
 			$output = $this->load->view ('templates/sbhanger/pdf', $data, true);
-			$this->output->set_content_type("application/json");
-			$this->output->set_output(json_encode(array('status'=>true, 'output'=>$output )));
+			if (is_string($output)) {
+				$this->output->set_content_type("application/json");
+				$this->output->set_output(json_encode(array('status'=>true, 'output'=>$output)));
+			} else {
+				$this->output->set_content_type("application/json");
+				$this->output->set_output(json_encode(array('status'=>false, 'error'=>$output)));
+			}
 		} else {
 			$this->output->set_content_type("application/json");
 			$this->output->set_output(json_encode(array('status'=>false, 'error'=>$response )));
